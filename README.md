@@ -18,5 +18,5 @@
 [`number_plate_old.png`](https://github.com/Oh-JongJin/Virtual_Number_Plate/releases/download/v0.1/number_plate_old.png) [`number_plate_new.png`](https://github.com/Oh-JongJin/Virtual_Number_Plate/releases/download/v0.1/number_plate_new.png)
 
 ```
-python virtual_plate.py
+python virtual_plate.py --new-plate number_plate_new.png --old-plate number_plate_old.png --count 50
 ```
