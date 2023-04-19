@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# Result folder and files
+virtual/
+
 # C extensions
 *.so
 
