@@ -6,10 +6,12 @@
 
 ## 사용 라이브러리
 
-- tqdm: 진행상황 시각화 용도 
+- **tqdm**: 진행상황 시각화 용도 
    `pip install tqdm `
-- PIL: 번호판 이미지 처리 용도
+- **PIL**: 번호판 이미지 처리 용도
   `pip install pillow`
+- **argparse**: 이미지 경로, 갯수, 설정 용도
+  `pip install argparse`
 
 ## 실행법
 
