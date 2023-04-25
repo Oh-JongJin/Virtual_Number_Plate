@@ -20,3 +20,8 @@
 ```
 python virtual_plate.py --new-plate number_plate_new.png --old-plate number_plate_old.png --count 50
 ```
+
+## 실행 결과
+| ![539보 2556](https://user-images.githubusercontent.com/45455262/234182656-eb640ab9-f48d-474b-9432-868a9c1b6ac8.png) | ![10구 4730](https://user-images.githubusercontent.com/45455262/234182518-3220eb12-6ffa-4e67-bac8-92aeb5d188c5.png) | ![147허 8450](https://user-images.githubusercontent.com/45455262/234182677-c3e624ed-cf1f-4d37-a539-99c5b31627e0.png) |
+| :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
+|                신형 8자리 번호판                |                구형 7자리 번호판                |                구형 8자리 번호판                |
