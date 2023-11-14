@@ -15,15 +15,30 @@
 - **argparse**: 이미지 경로, 갯수, 설정 용도
   `pip install argparse`
 
+
+
 ## 실행법
 
-[`number_plate_old.png`](https://github.com/Oh-JongJin/Virtual_Number_Plate/releases/download/v0.1/number_plate_old.png) [`number_plate_new.png`](https://github.com/Oh-JongJin/Virtual_Number_Plate/releases/download/v0.1/number_plate_new.png)
+1. 한길체 폰트 [다운로드](https://www.juso.go.kr/notice/NoticeBoardDetail.do?mgtSn=44&currentPage=11&searchType=&keyword=)
+2. 번호판 템플릿 이미지를 다운받아 `virtual_plate.py`과 같은 경로에 저장
+   [`number_plate_old.png`](https://github.com/Oh-JongJin/Virtual_Number_Plate/releases/download/v0.1/number_plate_old.png) [`number_plate_new.png`](https://github.com/Oh-JongJin/Virtual_Number_Plate/releases/download/v0.1/number_plate_new.png)
+
+
+
+```python
+python virtual_plate.py
+```
+
+
 
 ```
 python virtual_plate.py --new-plate number_plate_new.png --old-plate number_plate_old.png --count 50
 ```
 
+
+
 ## 실행 결과
+
 | ![539보 2556](https://user-images.githubusercontent.com/45455262/234182656-eb640ab9-f48d-474b-9432-868a9c1b6ac8.png) | ![10구 4730](https://user-images.githubusercontent.com/45455262/234182518-3220eb12-6ffa-4e67-bac8-92aeb5d188c5.png) | ![147허 8450](https://user-images.githubusercontent.com/45455262/234182677-c3e624ed-cf1f-4d37-a539-99c5b31627e0.png) |
 | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
 |                신형 8자리 번호판                |                구형 7자리 번호판                |                구형 8자리 번호판                |
