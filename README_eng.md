@@ -1,6 +1,6 @@
 # Virtual Number Plate
 
-### [Kor](README_kor.md) | [Eng](README_eng.md)
+### [Kor](README.md) | [Eng](README_eng.md)
 
 
 When `virtual_plate.py` is executed, a `virtual` folder is created in the path, and license plate images with random numbers for each type are stored inside.

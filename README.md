@@ -1,6 +1,6 @@
 # Virtual Number Plate
 
-### [Kor](README_kor.md) | [Eng](README_eng.md)
+### [Kor](README.md) | [Eng](README_eng.md)
 
 `virtual_plate.py` 실행 시 해당 경로에 `virtual` 폴더가 생성되며, 그 내부에 각각 종류별로 랜덤한 번호를 가진 번호판 이미지가 저장된다.
 
