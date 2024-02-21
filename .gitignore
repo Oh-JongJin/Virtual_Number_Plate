@@ -4,9 +4,6 @@ __pycache__/
 *$py.class
 .idea/
 
-# Result folder and files
-virtual/
-
 # C extensions
 *.so
 
@@ -136,4 +133,7 @@ dmypy.json
 *.png
 
 # Results
-virtual/
+result/
+
+# Asset folder
+asset/
