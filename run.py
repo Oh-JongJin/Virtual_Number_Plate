@@ -14,7 +14,6 @@ import argparse
 from tqdm import tqdm
 from PIL import Image, ImageDraw, ImageFont
 
-
 # Hangul Classification Used for Vehicle License Plates
 korean = '가나다라마' \
          '거너더러머버서어저' \
