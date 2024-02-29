@@ -55,3 +55,11 @@ python run.py --count 50 --save-path output_images
 | ![539보 2556](https://user-images.githubusercontent.com/45455262/234182656-eb640ab9-f48d-474b-9432-868a9c1b6ac8.png) | ![10구 4730](https://user-images.githubusercontent.com/45455262/234182518-3220eb12-6ffa-4e67-bac8-92aeb5d188c5.png) | ![147허 8450](https://user-images.githubusercontent.com/45455262/234182677-c3e624ed-cf1f-4d37-a539-99c5b31627e0.png) |
 | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
 |                신형 8자리 번호판                |                구형 7자리 번호판                |                구형 8자리 번호판                |
+
+
+
+## TODO (~ 2024/03)
+
+`Stable Diffusion` 사용하여 가상의 차량 이미지 생성 후, 위의 가상 번호판 삽입.
+
+차량 이미지 생성에 필요한 Model, LoRA 필요
