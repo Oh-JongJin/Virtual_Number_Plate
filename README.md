@@ -58,8 +58,13 @@ python run.py --count 50 --save-path output_images
 
 
 
-## TODO (~ 2024/03)
+## TODO
 
 `Stable Diffusion` 사용하여 가상의 차량 이미지 생성 후, 위의 가상 번호판 삽입.
 
-차량 이미지 생성에 필요한 Model, LoRA 필요
+차량 이미지 생성에 필요한 Model, LoRA 필요.
+
+ 
+
+2024/03/28 - SD 사용 가상 차량 이미지 생성. 차량 구현율 낮음.
+2024/03/29 - LP Segmentation Dataset 제작 중.

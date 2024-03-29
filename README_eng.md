@@ -51,8 +51,13 @@ When `virtual_plate.py` is executed, a `virtual` folder is created in the path, 
 
 
 
-## TODO (~ 2024/03)
+## TODO
 
 Create a virtual vehicle image using `Stable Diffusion` and insert the virtual license plate above.
 
 Model, LoRA required for vehicle image generation.
+
+
+
+2024/03/28 - Generate virtual vehicle images using Stable Diffusion. The fidelity of the vehicle implementation is low.
+2024/03/29 - Creating an LP Segmentation Dataset.
