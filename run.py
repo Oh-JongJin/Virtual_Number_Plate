@@ -2,17 +2,23 @@
 #
 # Authors:
 #   5jx2oh@gmail.com
+#
 # Reference:
 #   https://scorchingnraining.tistory.com/31
 
 
 import os
-import random
+import sys
 import time
+import json
+import random
 import argparse
+import urllib.request
 
 from tqdm import tqdm
+from colorama import Fore, Style, Back
 from PIL import Image, ImageDraw, ImageFont
+
 
 # Hangul Classification Used for Vehicle License Plates
 korean = '가나다라마' \
@@ -23,25 +29,28 @@ korean_taxi = '바사아자'
 korean_rent = '하허호'
 korean_parcel = '배'
 
-#
+os.makedirs('images', exist_ok=True)
 new_img_path = 'images/number_plate_new.png'
 old_img_path = 'images/number_plate_old.png'
+# Proceed with the download if the background image is missing
+if os.path.isfile(new_img_path) and os.path.isfile(old_img_path):
+    pass
+else:
+    with open('images_url.json', 'r') as f:
+        data = json.load(f)
+    for fname in data:
+        print(f'Download {Fore.GREEN + fname}{Style.RESET_ALL}.png image file in images/.')
+        urllib.request.urlretrieve(data[fname], f'images/{fname}.png')
 
-# User default path through environment variables
-user_profile = os.environ['USERPROFILE']
+# Hangil font variable declare
+hangil_font = ImageFont.truetype('fonts/Hangil.ttf', 100, encoding='unic')
 
-# Hangul font download path
-# https://www.juso.go.kr/notice/NoticeBoardDetail.do?mgtSn=44&currentPage=11&searchType=&keyword=
-ko_font = ImageFont.truetype(f'{user_profile}/AppData/Local/Microsoft/Windows/Fonts/Hangil.ttf',
-                             100, encoding='unic')
-# Numeric font information
-# https://fonts.google.com/noto/specimen/Noto+Sans+KR
-font = ImageFont.truetype(f'{user_profile}/AppData/Local/Microsoft/Windows/Fonts/NotoSansKR-Medium.ttf',
-                          120, encoding='unic')
+# Noto Sans font variable declare
+notosans_font = ImageFont.truetype('fonts/NotoSansKR-Medium.ttf', 120, encoding='unic')
 
 
-def run():
-    count, save_path = opt.count, opt.save_path
+def run(opts):
+    count, save_path = opts.count, opts.save_path
 
     start = time.time()
 
@@ -60,9 +69,9 @@ def run():
         image_pil = Image.open(new_img_path)
         draw = ImageDraw.Draw(image_pil)
         # draw.text( (x,y), License plate string, Font color, Font )
-        draw.text((85, -20), front, 'black', font)
-        draw.text((290, 35), middle, 'black', ko_font)
-        draw.text((375, -20), back, 'black', font)
+        draw.text((85, -20), front, 'black', notosans_font)
+        draw.text((290, 35), middle, 'black', hangil_font)
+        draw.text((375, -20), back, 'black', notosans_font)
 
         image_pil.save(f'{save_path}/new8/' + full_name + '.png', 'PNG')
 
@@ -75,9 +84,9 @@ def run():
 
         image_pil = Image.open(old_img_path)
         draw = ImageDraw.Draw(image_pil)
-        draw.text((40, -20), front, 'black', font)
-        draw.text((245, 35), middle, 'black', ko_font)
-        draw.text((340, -20), back, 'black', font)
+        draw.text((40, -20), front, 'black', notosans_font)
+        draw.text((245, 35), middle, 'black', hangil_font)
+        draw.text((340, -20), back, 'black', notosans_font)
 
         image_pil.save(f'{save_path}/old8/' + full_name + '.png', 'PNG')
 
@@ -90,9 +99,9 @@ def run():
 
         image_pil = Image.open(old_img_path)
         draw = ImageDraw.Draw(image_pil)
-        draw.text((65, -20), front, 'black', font)
-        draw.text((205, 30), middle, 'black', ko_font)
-        draw.text((315, -20), back, 'black', font)
+        draw.text((65, -20), front, 'black', notosans_font)
+        draw.text((205, 30), middle, 'black', hangil_font)
+        draw.text((315, -20), back, 'black', notosans_font)
 
         image_pil.save(f'{save_path}/old7/' + full_name + '.png', 'PNG')
 
@@ -105,4 +114,4 @@ if __name__ == '__main__':
     parser.add_argument('--save-path', type=str, default='result', help='Output path')
     opt = parser.parse_args()
 
-    run()
+    run(opts=opt)
