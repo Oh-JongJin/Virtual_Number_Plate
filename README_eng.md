@@ -9,10 +9,10 @@ This project is created for production of AI license plate recognition datasets 
 
 ## Environments
 
-- **Python==3.9.13**
+- **Python**
 
-- **tqdm==4.66.1**: Progress visualization usage
-- **pillow==10.1.0**: License plate image processing usage
+- **tqdm**: Progress visualization usage
+- **pillow**: License plate image processing usage
 - **urllib.request**
 - **colorama**
 

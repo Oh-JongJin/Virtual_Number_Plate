@@ -10,12 +10,12 @@
 
 ## 사용 환경
 
-- **Python==3.9.13**
+- **Python**
 
-- **tqdm==4.66.1**: 진행상황 시각화 용도 
-- **PIL==10.1.0**: 번호판 이미지 처리 용도
+- **tqdm**: 진행상황 시각화 용도 
+- **PIL**: 번호판 이미지 처리 용도
 - **urllib.request**: 번호판 배경 이미지 다운로드 용도
-- **colorama==0.4.6**: 콘솔 출력 가시성 향상 용도
+- **colorama**: 콘솔 출력 가시성 향상 용도
 
 
 
@@ -35,7 +35,7 @@ pip install tqdm pillow
 python run.py
 ```
 
-위 실행 결과는 3종류의 번호판이 `result` 폴더에 각각 100개씩 저장된다.
+위 실행 결과는 3종류의 번호판이 `result` 폴더에 각각 100개씩 저장됨
 
 
 
@@ -45,7 +45,7 @@ Argparse를 사용한 실행 형태 -
 python run.py --count 50 --save-path output_images
 ```
 
-`count`를 통해 저장되는 이미지 갯수를 조절할 수 있으며, `save-path`로 저장할 폴더 이름을 설정 할 수 있다.
+`count`를 통해 저장되는 이미지 갯수를 조절할 수 있으며, `save-path`로 저장할 폴더 이름을 설정 가능
 
 
 
@@ -53,7 +53,7 @@ python run.py --count 50 --save-path output_images
 
 ## 결과 이미지
 
-`run.py` 실행 시 해당 경로에 결과 이미지 저장 폴더가 생성되며, 그 내부에 각각 종류별로 랜덤한 번호를 가진 번호판 이미지가 저장된다.
+`run.py` 실행 시 해당 경로에 결과 이미지 저장 폴더가 생성되며, 그 내부에 각각 종류별로 랜덤한 번호를 가진 번호판 이미지 저장
 
 | ![539보 2556](https://user-images.githubusercontent.com/45455262/234182656-eb640ab9-f48d-474b-9432-868a9c1b6ac8.png) | ![10구 4730](https://user-images.githubusercontent.com/45455262/234182518-3220eb12-6ffa-4e67-bac8-92aeb5d188c5.png) | ![147허 8450](https://user-images.githubusercontent.com/45455262/234182677-c3e624ed-cf1f-4d37-a539-99c5b31627e0.png) |
 | :--------------------------------------: | :--------------------------------------: | :--------------------------------------: |
@@ -65,9 +65,9 @@ python run.py --count 50 --save-path output_images
 
 ## TODO
 
-`Stable Diffusion` 사용하여 가상의 차량 이미지 생성 후, 위의 가상 번호판 삽입.
+`Stable Diffusion` 사용하여 가상의 차량 이미지 생성 후, 위의 가상 번호판 삽입
 
-차량 이미지 생성에 필요한 Model, LoRA 필요.
+차량 이미지 생성에 필요한 Model, LoRA 필요
 
  
 
