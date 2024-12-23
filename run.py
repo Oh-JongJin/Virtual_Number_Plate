@@ -110,7 +110,7 @@ def run(opts):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--count', type=int, default=100, help='Number of image to save')
+    parser.add_argument('--count', type=int, default=10, help='Number of image to save')
     parser.add_argument('--save-path', type=str, default='result', help='Output path')
     opt = parser.parse_args()
 
